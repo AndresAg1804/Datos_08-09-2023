@@ -1,51 +1,51 @@
-#include <iostream>
-#include <vector>
-int busquedaIter(std::vector<int>, int);
-int busquedaRecur(std::vector<int>, int);
+//#include <iostream>
+//#include <vector>
+//int busquedaIter(std::vector<int>, int);
+//int busquedaRecur(std::vector<int>, int);
+//
+//
+//int main() {
+//	std::vector<int> aux = { 7,10,12,13,18,20,25,29,31,35 };
+//
+//
+//	std::cout << busquedaIter(aux, 10) << std::endl;
+//	return 0;
+//}
+//
+//int busquedaIter(std::vector<int> vec , int buscado)
+//{
+//	int min = 0;
+//	int max = vec.size() - 1;
+//	int mitad = max / 2;
+//
+//	while (min <= max) {
+//		if (vec.at(mitad) == buscado) return mitad;
+//		else {
+//			if (vec.at(mitad) > buscado) {
+//				min = mitad;
+//				mitad = (min + max) / 2;
+//			}
+//			else {
+//				max = mitad;
+//				mitad = (min + max) / 2;
+//			}
+//		}
+//	}
+//
+//
+//
+//	return -1;
+//}
+//
+//int busquedaRecur(int vec[], int buscado)
+//{
+//	return 0;
+//}
+//
 
 
-int main() {
-	std::vector<int> aux = { 7,10,12,13,18,20,25,29,31,35 };
 
 
-	std::cout << busquedaIter(aux, 10) << std::endl;
-	return 0;
-}
-
-int busquedaIter(std::vector<int> vec , int buscado)
-{
-	int min = 0;
-	int max = vec.size() - 1;
-	int mitad = max / 2;
-
-	while (min <= max) {
-		if (vec.at(mitad) == buscado) return mitad;
-		else {
-			if (vec.at(mitad) > buscado) {
-				min = mitad;
-				mitad = (min + max) / 2;
-			}
-			else {
-				max = mitad;
-				mitad = (min + max) / 2;
-			}
-		}
-	}
-
-
-
-	return -1;
-}
-
-int busquedaRecur(int vec[], int buscado)
-{
-	return 0;
-}
-
-
-
-
-/*
 #include <iostream>
 #include <vector>
 #include <algorithm>
@@ -98,7 +98,7 @@ void imprimir(const std::vector<int>& v)
 	std::cout << '\n';
 }
 
-int binaria_iterativa(const std::vector<int>& v, int x)
+int binaria_iterativa(const std::vector<int>& v, int x) // Por que no se encuentra la primera posicion?
 {
 	std::size_t mitad, min, max;
 
@@ -127,7 +127,7 @@ int binaria_recursiva(const std::vector<int>& v, int x)
 	return binaria_recursiva(v, x, 0, v.size() - 1);
 }
 
-int binaria_recursiva(const std::vector<int>& v, int x, std::size_t min, std::size_t max)
+int binaria_recursiva(const std::vector<int>& v, int x, std::size_t min, std::size_t max) // Por que crashea?
 {
 	// Si el limite inferior es mayor al límite mayor terminamos
 	if (min > max) {
@@ -148,4 +148,3 @@ int binaria_recursiva(const std::vector<int>& v, int x, std::size_t min, std::si
 }
 
 
-*/
